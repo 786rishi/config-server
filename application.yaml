@@ -1,0 +1,19 @@
+spring:
+  port: 8083
+  cloud:
+    gateway:
+      routes:
+        - id: account-management
+          uri: http://localhost:8081
+          predicates:
+            - Path=/account-management/**
+          filters:
+            - StripPrefix=1
+        - id: customer-management
+          uri: http://localhost:8082
+          predicates:
+            - Path=/customer-management/**
+          filters:
+            - StripPrefix=1
+  application:
+    name: api-gateway
