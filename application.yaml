@@ -17,4 +17,4 @@ gateway:
           filters:
             - StripPrefix=1
   application:
-    name: api-gateway
+    name: gateway
