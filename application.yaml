@@ -16,4 +16,4 @@ spring:
           filters:
             - StripPrefix=1
   application:
-    name: gateway
+    name: gateway-rishi
