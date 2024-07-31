@@ -4,13 +4,13 @@ spring:
     gateway:
       routes:
         - id: account-management
-          uri: http://localhost:8081
+          uri: lb://account-management
           predicates:
             - Path=/account-management/**
           filters:
             - StripPrefix=1
         - id: customer-management
-          uri: http://localhost:8082
+          uri: lb://customer-management
           predicates:
             - Path=/customer-management/**
           filters:
